@@ -4,32 +4,60 @@
 	<meta charset="UTF-8">
 	<title>Questionario</title>
 	<link rel="stylesheet" href="style/style.css">
-	<script type="text/javascript" url="script/script.js" ></script>
+	<script type="text/javascript" src="script/script.js" ></script>
 <body>
-<!--<header>
+<header>
 	<h1>Cuestionario</h1>
 	<h2>Contesta a todas las preguntas:</h2>
 </header>
-	<div>
-		<h3>1.- Cual de estos juegos es un exclusivo de Sony:</h1>
-		<div>
+	<div class="caja1">
+		<div class="enunciado preg1">
+			<h3>1.- Cual de estos juegos es un exclusivo de Sony:</h3>
+		</div>
+		<div class="botones">
+			<input class="btn" type=image src="assets/reset.png" name="limpiarRespuestas" id="btn1">
+			<input class="btn" type=image src="assets/Check.png" name="verificarRespuestas" id="btn2">
+		</div>
+		<div class="respuestas">
 			<p><input type="radio" name="rp1.1" id="rp1.1">Half life</p>
 			<p><input type="radio" name="rp1.2" id="rp1.2">Halo</p>
 			<p><input type="radio" name="rp1.3" id="rp1.3">The Last of Us</p>
 		</div>
+		<div class="intentos">
+			<h3>contador : nº</h3>
+		</div>
 	</div>
-	<div>
-		<h3>2.- El protagonista de "The Legend of Zelda" es Zelda.</h1>
-		<div>
+	<div class="caja2">
+		<div class="enunciado preg2">
+			<h3>2.- El protagonista de "The Legend of Zelda" es Zelda.</h3>
+		</div>
+		<div Class="botones">
+			<input class="btn" type=image src="assets/reset.png" name="limpiarRespuestas" id="btn3">
+			<input class="btn" type=image src="assets/Check.png" name="verificarRespuestas" id="btn4">
+		</div>
+		<div Class="respuestas">
 			<p><input type="radio" name="rp2.1" id="rp2.1">Verdadero</p>
 			<p><input type="radio" name="rp2.2" id="rp2.2">Falso</p>
 		</div>
-	</div>
-	<div>
-		<h3>3.- Argumentame que plataforma es la mejor para jugar a FPS(First Personal Shooter):</h1>
-		<div>
-			<textarea name="tx1" id="tx1" rows="4" cols="50"></textarea>
+		<div Class="intentos">
+			<h3>contador: nº</h3>
 		</div>
-	</div>-->
+	</div>
+	<div class="caja3">
+		<div class="enunciado preg2">
+			<h3>3.- Argumentame que plataforma es la mejor para jugar a FPS(First Personal Shooter):</h3>
+		</div>
+		<div Class="botones">
+			<input class="btn" type=image src="assets/reset.png" name="limpiarRespuestas" id="btn5">
+			<input class="btn" type=image src="assets/Check.png" name="verificarRespuestas" id="btn6">
+		</div>
+		<div Class="respuestas">
+			<textarea name="textArea1" id="textArea" cols="150" rows="10"></textarea>
+		</div>
+		<div Class="intentos">
+			<h3>contador: nº</h3>
+		</div>
+	</div>
+	</div>
 </body>
 </html>
