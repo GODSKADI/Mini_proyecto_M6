@@ -1,22 +1,34 @@
-
-
+//Respuestas del Cuestionario
+var respuesta1 = "rp1.3";
+var respuesta2 = "rp2.3";
+var respuesta3 = "PC";
 //Funcion que comprueba las respuestas para saver si son correctas o incorrectas
 function comprobarRespuestas(e){
-  /*var elemntoHTML;
-  if(e.srcElement){
-    elemntoHTML = e.srcElement;
-  }else if(e.target){
-    elemntoHTML = e.target;
-  }*/
+  if(){
+
+  }
 }
 
 //Funcion que permite limpiar las preguntas seleccionadas
-function limpiar(){
-
+function limpiar(e){
+  var btnLimpiar;
+  if(e.srcElement){
+    btnLimpiar = e.srcElement.id;
+  }else if(e.target){
+    btnLimpiar = e.target.id;
+  }
+  if(btnLimpiar == "btn1"){
+    document.getElementById('rp1.1').checked = false;
+    document.getElementById('rp1.2').checked = false;
+    document.getElementById('rp1.3').checked = false;
+  }else if(btnLimpiar == "btn3"){
+    document.getElementById('rp2.1').checked = false;
+    document.getElementById('rp2.2').checked = false;
+    document.getElementById('rp2.3').checked = false;
+  }else if(btnLimpiar == "btn5"){
+    document.getElementById("textArea").value = "";
+  }
 }
-
-
-
 //Funcion que lleva la cuenta de intentos realizados
 //Variable intentos
 
