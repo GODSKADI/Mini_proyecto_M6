@@ -2,10 +2,16 @@ body{
   margin-left: 50px;
   background-color: #4a4949;
 }
-
+/*.cabecera{
+	column-count: 2;
+	column-width: 45%;
+}*/
 .btn{
 	width:2.5%;
   background-color: white;
   border: solid black 1px;
   border-radius: 100%;
+}
+header>h1{
+	
 }
