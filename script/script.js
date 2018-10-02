@@ -4,9 +4,6 @@ var respuesta2 = "rp2.3";
 var respuesta3 = "PC";
 //Funcion que comprueba las respuestas para saver si son correctas o incorrectas
 function comprobarRespuestas(e){
-  if(){
-
-  }
 }
 
 //Funcion que permite limpiar las preguntas seleccionadas
@@ -18,13 +15,21 @@ function limpiar(e){
     btnLimpiar = e.target.id;
   }
   if(btnLimpiar == "btn1"){
-    document.getElementById('rp1.1').checked = false;
-    document.getElementById('rp1.2').checked = false;
-    document.getElementById('rp1.3').checked = false;
+    var contador = 1;
+    var numClass = document.getElementsByClassName('rp1');
+    numClass = numClass.length;
+    while(contador <= numClass){
+      document.getElementById("rp1."+contador+"").checked = false;
+      contador++;
+    }
   }else if(btnLimpiar == "btn3"){
-    document.getElementById('rp2.1').checked = false;
-    document.getElementById('rp2.2').checked = false;
-    document.getElementById('rp2.3').checked = false;
+    var contador = 1;
+    var numClass = document.getElementsByClassName('rp2');
+    numClass = numClass.length;
+    while(contador <= numClass){
+      document.getElementById("rp2."+contador+"").checked = false;
+      contador++;
+    }
   }else if(btnLimpiar == "btn5"){
     document.getElementById("textArea").value = "";
   }
