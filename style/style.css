@@ -1,16 +1,15 @@
 body{
   margin-left: 50px;
-  background-color: #4a4949;
+  /*background-color: #4a4949;*/
 }
 .contenido{
 	margin:auto;
 	width: 90%;	
 }
 .btn{
-	width:2.5%;
-  background-color: white;
-  border: solid black 1px;
-  border-radius: 100%;
+	width:3%;
+  	border: solid black 1.5px;
+  	border-radius: 100%;
 }
 header>h1,header>h2{
 	text-align: center;
@@ -27,3 +26,35 @@ header>h1,header>h2{
 .intentos{
 	float: right;
 }
+
+/*M09--
+1) S'ha de marcar de color blau clar les respostes, quan es passi per sobre amb el ratolí.
+
+2) Si es clica a una, ha de quedar marcada la resposta amb un color blau més fort, de forma permanent.
+
+3) A cada pregunta hi han dos botons, al passar per sobre s'ha de veure el seu negatiu.
+
+4) Un cop s'accepti la resposta, haurà de quedar marcada en verd si està bé, o vermell si està malament.
+
+5) Al costat de la resposta deixarem una marca de correcte o incorrecte.
+*/
+		.rep{
+			padding: 1%;
+		}
+		.rep:hover{
+			background-color: Aquamarine;
+
+		}
+		/*.btn:hover{
+			color:white;
+			background-color: black;
+		}*/
+		li:focus{
+			background-color: blue;
+		}
+		ul.radio{
+			list-style: none;
+		}
+
+
+

@@ -10,72 +10,99 @@
 	<h1>Cuestionario</h1>
 	<h2>Contesta a todas las preguntas:</h2>
 </header>
-<<<<<<< HEAD
 <div class="contenido">
-	<div class="caja">
-		<div class="enunciado">
+	<fieldset class="radiogroup">
+		<legend></legend>
 			<h3>
 				1.- Cual de estos juegos es un exclusivo de Sony:		
-				<input class="btn" type=image src="assets/reset.png" name="limpiarRespuestas" id="btn1">
+				<input class="btn" type=image src="assets/reset.png" name="limpiarRespuestas" id="btn1" onclick ="limpiar(event)"/>
+				<input class="btn" type=image src="assets/checkG.png" name="verificarRespuestas" id="btn2" onclick="verificar(event)" />
+			</h3>
+	  		<ul class="radio ">
+	    		<li class="rep">
+	    			<input class="rp1" type="radio" name="rp1" id="rp1.1" value="half" /><label for="crust1">Half life</label>
+	    			<img class="imgVerficar" id="cross1" src="assets/red_cross.png">
+					<img class="imgVerficar" id="check1" src="assets/Check_green.png">
+	    		</li>
+	    		<li class="rep">
+	    			<input class="rp1" type="radio" name="rp1" id="rp1.2" value="halo" /><label for="crust2">Halo</label>
+	    			<img class="imgVerficar" src="assets/red_cross.png">
+					<img class="imgVerficar" src="assets/Check_green.png">
+	    		</li>
+	    		<li class="rep">
+	    			<input class="rp1" type="radio" name="rp1" id="rp1.3" value="last" /><label for="crust3">The Last of Us</label>
+	    			<img class="imgVerficar" src="assets/red_cross.png">
+					<img class="imgVerficar" src="assets/Check_green.png">
+	    		</li>
+	  		</ul>
+	</fieldset>
+
+
+	<!--
+	<div class="caja">
+		<div class="enunciado preg1">
+			<h3>
+				1.- Cual de estos juegos es un exclusivo de Sony:		
+				<input class="btn" type=image src="assets/reset.png" name="limpiarRespuestas" id="btn1" onclick ="limpiar(event)">
 				<input class="btn" type=image src="assets/checkG.png" name="verificarRespuestas" id="btn2">
 			</h3>
 			</div>
 		<div class="respuestas">
-			<p>
-				<input type="radio" name="rp1.1" id="rp1.1">Half life 
+			<p class="rep">
+				<input type="radio" name="rp1" id="rp1.1"/><label for="rp1">Half life </label>
 				<img id="" class="imgVerficar" src="assets/red_cross.png">
 				<img class="imgVerficar" src="assets/Check_green.png">
 			</p>
-			<p>
-				<input type="radio" name="rp1.2" id="rp1.2">Halo
+			<p class="rep">
+				<input type="radio" name="rp1" id="rp1.2">Halo
 				<img class="imgVerficar" src="assets/red_cross.png" display="none">
 				<img class="imgVerficar" src="assets/Check_green.png">
 			</p>
-			<p>
-				<input type="radio" name="rp1.3" id="rp1.3">The Last of Us
+			<p class="rep">
+				<input type="radio" name="rp1" id="rp1.3">The Last of Us
 				<img class="imgVerficar" src="assets/red_cross.png" display="none">
 				<img class="imgVerficar" src="assets/Check_green.png">
 			</p>
-=======
-	<div class="caja1">
-		<div class="enunciado preg1">
-			<h3>1.- Cual de estos juegos es un exclusivo de Sony:</h3>
-		</div>
-		<div class="botones">
-			<input class="btn" type=image src="assets/reset.png" name="limpiarRespuestas" id="btn1" onclick ="limpiar(event)">
-			<input class="btn" type=image src="assets/Check.png" name="verificarRespuestas" id="btn2">
-		</div>
-		<div class="respuestas">
-			<p><input type="radio" name="rp1" class="rp1" id="rp1.1">Half life</p>
-			<p><input type="radio" name="rp1" class="rp1" id="rp1.2">Halo</p>
-			<p><input type="radio" name="rp1" class="rp1" id="rp1.3">The Last of Us</p>
->>>>>>> 13cb9ed8eb03d6f6c92a0f57c26c0df0659e3766
 		</div>
 		<div class="intentos">
 			<h3>Intentos : nº</h3>
 		</div>
 	</div>
-<<<<<<< HEAD
+	
+	<!--
+	<fieldset class="radiogroup">
+
+<legend>Select pizza crust</legend>
+  <ul class="radio">
+    <li><input type="radio" name="crust" id="crust1" value="deep" /><label for="crust1">Deep dish</label></li>
+    <li><input type="radio" name="crust" id="crust2" value="thick" /><label for="crust2">Thick</label></li>
+    <li><input type="radio" name="crust" id="crust3" value="hand" /><label for="crust3">Hand thrown</label></li>
+    <li><input type="radio" name="crust" id="crust4" value="thin" /><label for="crust4">Thin</label></li>
+  </ul>
+</fieldset>
+-->
+<!--
 	<div class="caja">
-		<div class="enunciado">
+		<div class="enunciado preg2">
 			<h3>
 				2.- El protagonista de "The Legend of Zelda" es Zelda.
-				<input class="btn" type=image src="assets/reset.png" name="limpiarRespuestas" id="btn3">
+				<input class="btn" type=image src="assets/reset.png" name="limpiarRespuestas" id="btn3" onclick ="limpiar(event)">
 				<input class="btn" type=image src="assets/checkG.png" name="verificarRespuestas" id="btn4">
 			</h3>
 		</div>
 		<div Class="respuestas">
 			<p>
-				<input type="radio" name="rp2.1" id="rp2.1">Verdadero
+				<input type="radio" name="rp2" id="rp2.1">Verdadero
 				<img class="imgVerficar" src="assets/red_cross.png" display="none">
 				<img class="imgVerficar" src="assets/Check_green.png">
 			</p>
 			<p>
-				<input type="radio" name="rp2.2" id="rp2.2">Falso 
+				<input type="radio" name="rp2" id="rp2.2">Falso 
 				<img class="imgVerficar" src="assets/red_cross.png" display="none">
 				<img class="imgVerficar" src="assets/Check_green.png">
 			</p>
-=======
+=======-->
+<!--
 	<div class="caja2">
 		<div class="enunciado preg2">
 			<h3>2.- El protagonista de "The Legend of Zelda" es Zelda.</h3>
@@ -88,11 +115,14 @@
 			<p><input type="radio" name="rp2" class="rp2" id="rp2.1">Verdadero</p>
 			<p><input type="radio" name="rp2" class="rp2" id="rp2.2">Falso</p>
 >>>>>>> 13cb9ed8eb03d6f6c92a0f57c26c0df0659e3766
+
 		</div>
 		<div Class="intentos">
 			<h3>Intentos: nº</h3>
 		</div>
 	</div>
+-->
+<!--
 <<<<<<< HEAD
 	<div class="caja">
 		<div class="enunciado">
@@ -102,6 +132,8 @@
 				<input class="btn" type=image src="assets/checkG.png" name="verificarRespuestas" id="btn6">
 			</h3>
 =======
+-->
+<!--
 	<div class="caja3">
 		<div class="enunciado preg2">
 			<h3>3.- Argumentame que plataforma es la mejor para jugar a FPS(First Personal Shooter):</h3>
@@ -110,10 +142,9 @@
 			<input class="btn" type=image src="assets/reset.png" name="limpiarRespuestas" id="btn5" onclick ="limpiar(event)">
 			<input class="btn" type=image src="assets/Check.png" name="verificarRespuestas" id="btn6">
 >>>>>>> 13cb9ed8eb03d6f6c92a0f57c26c0df0659e3766
-		</div>
-			
-		
-		
+-->
+<!--
+		</div>	
 		<div Class="respuestas">
 <<<<<<< HEAD
 			<textarea name="textArea1" id="textArea" cols="100" rows="10"></textarea>
@@ -127,6 +158,7 @@
 		</div>
 	</div>
 	</div>
+-->
 </div>
 </body>
 </html>

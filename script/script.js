@@ -34,6 +34,27 @@ function limpiar(e){
     document.getElementById("textArea").value = "";
   }
 }
+//Funcion check
+//
+function verificar(e){
+  var btnVerificar;
+  if(e.srcElement){
+    btnVerificar = e.srcElement.id;
+  }else if(e.target){
+    btnVerificar = e.target.id;
+  }
+  alert(btnVerificar);
+  if(btnVerificar == "btn2"){
+    var contador = 1;
+    var numClass = document.getElementsByClassName('rp1');
+    for (var i = numClass.length - 1; i >= 0; i--) {
+      if(numClass[i].checked){
+        document.getElementById('imgVerficar').style.visibility = visible;
+      }
+    }
+    
+  }
+}
 //Funcion que lleva la cuenta de intentos realizados
 //Variable intentos
 
