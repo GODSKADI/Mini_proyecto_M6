@@ -1,10 +1,7 @@
 //Respuestas del Cuestionario
-var respuesta1 = "rp1.3";
-var respuesta2 = "rp2.3";
-var respuesta3 = "PC";
-//Funcion que comprueba las respuestas para saver si son correctas o incorrectas
-function comprobarRespuestas(e){
-}
+var resPregunta3 = "PC";
+var resPregunta4t1 = "verdad";
+var resPregunta4t2 = "permitido";
 
 //Funcion que permite limpiar las preguntas seleccionadas
 function limpiar(e){
@@ -14,7 +11,7 @@ function limpiar(e){
   }else if(e.target){
     btnLimpiar = e.target.id;
   }
-  if(btnLimpiar == "btn1"){
+  if(btnLimpiar == "btnLimp1"){
     var contador = 1;
     var numClass = document.getElementsByClassName('rp1');
     numClass = numClass.length;
@@ -22,7 +19,7 @@ function limpiar(e){
       document.getElementById("rp1."+contador+"").checked = false;
       contador++;
     }
-  }else if(btnLimpiar == "btn3"){
+  }else if(btnLimpiar == "btnLimp2"){
     var contador = 1;
     var numClass = document.getElementsByClassName('rp2');
     numClass = numClass.length;
@@ -30,12 +27,15 @@ function limpiar(e){
       document.getElementById("rp2."+contador+"").checked = false;
       contador++;
     }
-  }else if(btnLimpiar == "btn5"){
+  }else if(btnLimpiar == "btnLimp3"){
     document.getElementById("textArea").value = "";
   }
 }
-//Funcion check
-//
+//Funcion que verifica las respuestas contestadas de las preguntas
+var contador_interno1 = 0;
+var contador_interno2 = 0;
+var contador_interno3 = 0;
+var contador_interno4 = 0;
 function verificar(e){
   var btnVerificar;
   if(e.srcElement){
@@ -43,22 +43,48 @@ function verificar(e){
   }else if(e.target){
     btnVerificar = e.target.id;
   }
-  alert(btnVerificar);
-  if(btnVerificar == "btn2"){
-    var contador = 1;
-    var numClass = document.getElementsByClassName('rp1');
-    for (var i = numClass.length - 1; i >= 0; i--) {
-      if(numClass[i].checked){
-        document.getElementById('imgVerficar').style.visibility = visible;
-      }
+  if(btnVerificar == "btnVer1"){
+    if(document.getElementById("rp1.3").checked == true){
+      alert("correcto");
+      document.getElementById("rp1.3").className = "rpCo";
+    }else if(document.getElementById("rp1.1").checked == true){
+      alert("Incorrecto");
+      document.getElementById("rp1.3").className = "rpIn";
+    }else if(document.getElementById("rp1.2").checked == true){
+      alert("Incorrecto");
+      document.getElementById("rp1.2").className = "rpIn";
     }
-    
+    contador_interno1++;
+    document.getElementById("intentoInterno1").innerHTML = contador_interno1;
   }
+  else if(btnVerificar == "btnVer2"){
+    if(document.getElementById("rp2.2").checked == true){
+      alert("correcto");
+    }else if(document.getElementById("rp2.1").checked == true){
+      alert("Incorrecto");
+    }
+    contador_interno2++;
+    document.getElementById("intentoInterno2").innerHTML = contador_interno2;
+  }
+  else if(btnVerificar == "btnVer3"){
+    document.getElementById("resP3").innerHTML = "PC";
+    contador_interno3++;
+    document.getElementById("intentoInterno3").innerHTML = contador_interno3;
+  }
+  else if(btnVerificar == "btnVer4"){
+    if(document.getElementById("rp4.1").value == resPregunta4t1 && document.getElementById("rp4.2").value == resPregunta4t2){
+      alert("correcto");
+    }else{
+      alert("Incorrecto");
+    }
+    contador_interno4++;
+    document.getElementById("intentoInterno4").innerHTML = contador_interno4;
+  }
+  intentoGlobal();
 }
 //Funcion que lleva la cuenta de intentos realizados
 //Variable intentos
-
-intentos = 0;
-function intentos(){
-
+function intentoGlobal(){
+  var intentoGlobal = contador_interno1 + contador_interno2 + contador_interno3 + contador_interno4;
+  document.getElementById("intentoGlobal").innerHTML = intentoGlobal;
 }
