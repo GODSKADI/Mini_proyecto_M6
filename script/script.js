@@ -13,22 +13,26 @@ function limpiar(e){
   }
   if(btnLimpiar == "btnLimp1"){
     var contador = 1;
-    var numClass = document.getElementsByClassName('rp1');
+    var numClass = document.getElementsByName('rp1');
     numClass = numClass.length;
     while(contador <= numClass){
       document.getElementById("rp1."+contador+"").checked = false;
       contador++;
     }
-  }else if(btnLimpiar == "btnLimp2"){
+  }if(btnLimpiar == "btnLimp2"){
     var contador = 1;
-    var numClass = document.getElementsByClassName('rp2');
+    var numClass = document.getElementsByName('rp2');
     numClass = numClass.length;
     while(contador <= numClass){
       document.getElementById("rp2."+contador+"").checked = false;
       contador++;
     }
-  }else if(btnLimpiar == "btnLimp3"){
+  }if(btnLimpiar == "btnLimp3"){
     document.getElementById("textArea").value = "";
+  }if(btnLimpiar == "btnLimp4"){
+    document.getElementById("rp4.1").value = "";
+    document.getElementById("rp4.2").value = "";
+
   }
 }
 //Funcion que verifica las respuestas contestadas de las preguntas
@@ -47,12 +51,15 @@ function verificar(e){
     if(document.getElementById("rp1.3").checked == true){
       alert("correcto");
       document.getElementById("rp1.3").className = "rpCo";
+      document.getElementById("checkP1.3").style.visibility = "visible";
     }else if(document.getElementById("rp1.1").checked == true){
       alert("Incorrecto");
       document.getElementById("rp1.3").className = "rpIn";
+      document.getElementById("crossP1.1").style.visibility = "visible";
     }else if(document.getElementById("rp1.2").checked == true){
       alert("Incorrecto");
       document.getElementById("rp1.2").className = "rpIn";
+      document.getElementById("crossP1.2").style.visibility = "visible";
     }
     contador_interno1++;
     document.getElementById("intentoInterno1").innerHTML = contador_interno1;
@@ -60,8 +67,10 @@ function verificar(e){
   else if(btnVerificar == "btnVer2"){
     if(document.getElementById("rp2.2").checked == true){
       alert("correcto");
+      document.getElementById("checkP2.1").style.visibility = "visible";
     }else if(document.getElementById("rp2.1").checked == true){
       alert("Incorrecto");
+      document.getElementById("crossP2.1").style.visibility = "visible";
     }
     contador_interno2++;
     document.getElementById("intentoInterno2").innerHTML = contador_interno2;
@@ -74,8 +83,10 @@ function verificar(e){
   else if(btnVerificar == "btnVer4"){
     if(document.getElementById("rp4.1").value == resPregunta4t1 && document.getElementById("rp4.2").value == resPregunta4t2){
       alert("correcto");
+      document.getElementById("checkP4.1").style.visibility = "visible";
     }else{
       alert("Incorrecto");
+      document.getElementById("crossP4.1").style.visibility = "visible";
     }
     contador_interno4++;
     document.getElementById("intentoInterno4").innerHTML = contador_interno4;
