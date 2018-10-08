@@ -2,18 +2,22 @@
 /*botones*/
 function negativoLimp(x) {
   x.src="assets/reset_w.png";
-
+  x.style.backgroundColor = "black";
 }
 
 function normalLimp(x) {
   x.src ="assets/reset.png";
+  x.style.backgroundColor = "";
 }
 function negativoCheck(x) {
-  document.getElementById("btnVer1").src ="assets/check_w.png";
+  x.src="assets/check_w.png";
+  x.style.backgroundColor = "black";
 }
 
 function normalCheck(x) {
-  document.getElementById("btnVer1").src ="assets/checkG.png";
+  x.src="assets/checkG.png";
+  x.style.backgroundColor = "";
+
 }
 
 //Respuestas del Cuestionario
@@ -36,7 +40,7 @@ function limpiar(e){
     while(contador <= numClass){
       document.getElementById("rp1."+contador+"").checked = false;
       document.getElementById("rep1-"+contador+"").style.backgroundColor="";
-      document.getElementById("checkP1."+contador+"").style.visibility="hidden"; 
+      document.getElementById("checkP1."+contador+"").style.visibility="hidden";
       document.getElementById("crossP1."+contador+"").style.visibility="hidden";
       contador++;
     }
@@ -47,19 +51,19 @@ function limpiar(e){
     while(contador <= numClass){
       document.getElementById("rp2."+contador+"").checked = false;
       document.getElementById("rep2-"+contador+"").style.backgroundColor="";
-      document.getElementById("checkP2."+contador+"").style.visibility="hidden"; 
+      document.getElementById("checkP2."+contador+"").style.visibility="hidden";
       document.getElementById("crossP2."+contador+"").style.visibility="hidden";
       contador++;
     }
   }if(btnLimpiar == "btnLimp3"){
     document.getElementById("textArea").value = "";
-    document.getElementById("repText").style.backgroundColor = ""; 
+    document.getElementById("repText").style.backgroundColor = "";
   }if(btnLimpiar == "btnLimp4"){
     document.getElementById("rp4.1").value = "";
     document.getElementById("rp4.2").value = "";
-    document.getElementById("checkP4.1").style.visibility="hidden"; 
+    document.getElementById("checkP4.1").style.visibility="hidden";
     document.getElementById("crossP4.1").style.visibility="hidden";
-    document.getElementById("multiTextRep").style.backgroundColor = ""; 
+    document.getElementById("multiTextRep").style.backgroundColor = "";
 
   }
 }
@@ -78,14 +82,14 @@ function verificar(e){
   if(btnVerificar == "btnVer1"){
     if(document.getElementById("rp1.3").checked == true){
         document.getElementById("rp1.3").className = "rpCo";
-      document.getElementById("checkP1.3").style.visibility = "visible"; 
-      document.getElementById("rep1-3").style.backgroundColor = "GreenYellow"; 
-           
+      document.getElementById("checkP1.3").style.visibility = "visible";
+      document.getElementById("rep1-3").style.backgroundColor = "GreenYellow";
+
     }else if(document.getElementById("rp1.1").checked == true){
           document.getElementById("rp1.3").className = "rpIn";
       document.getElementById("crossP1.1").style.visibility = "visible";
-      document.getElementById("rep1-1").style.backgroundColor = "#ff8080"; 
-          
+      document.getElementById("rep1-1").style.backgroundColor = "#ff8080";
+
     }else if(document.getElementById("rp1.2").checked == true){
           document.getElementById("rp1.2").className = "rpIn";
       document.getElementById("crossP1.2").style.visibility = "visible";
@@ -105,17 +109,17 @@ function verificar(e){
   }
   else if(btnVerificar == "btnVer3"){
     document.getElementById("resP3").innerHTML = "PC";
-    document.getElementById("repText").style.backgroundColor = "#fff757"; 
+    document.getElementById("repText").style.backgroundColor = "#fff757";
     contador_interno3++;
     document.getElementById("intentoInterno3").innerHTML = contador_interno3;
   }
   else if(btnVerificar == "btnVer4"){
     if(document.getElementById("rp4.1").value == resPregunta4t1 && document.getElementById("rp4.2").value == resPregunta4t2){
         document.getElementById("checkP4.1").style.visibility = "visible";
-      document.getElementById("multiTextRep").style.backgroundColor = "GreenYellow"; 
+      document.getElementById("multiTextRep").style.backgroundColor = "GreenYellow";
     }else{
           document.getElementById("crossP4.1").style.visibility = "visible";
-      document.getElementById("multiTextRep").style.backgroundColor = "#ff8080"; 
+      document.getElementById("multiTextRep").style.backgroundColor = "#ff8080";
     }
     contador_interno4++;
     document.getElementById("intentoInterno4").innerHTML = contador_interno4;
