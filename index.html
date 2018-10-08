@@ -15,22 +15,23 @@
 		<legend><h3>1.-</h3></legend>
 			<h3>
 				Cual de estos juegos es un exclusivo de Sony:
-				<input class="btn" type=image src="assets/reset.png" name="limpiarRespuestas" id="btnLimp1" onclick ="limpiar(event)"/>
-				<input class="btn" type=image src="assets/checkG.png" name="verificarRespuestas" id="btnVer1" onclick="verificar(event)" />
+					<input class="btn orig" type=image src="assets/reset.png" name="limpiarRespuestas" id="btnLimp1" onclick ="limpiar(event)"/>
+					<input class="btn" type=image src="assets/checkG.png" name="verificarRespuestas" id="btnVer1" onclick="verificar(event)" />
+
 			</h3>
 	  		<ul class="radio ">
-	    		<li class="rep">
+	    		<li id="rep1-1">
 	    			<input type="radio" name="rp1" id="rp1.1" value="half" /><label for="crust1">Half life</label>
 	    			<img class="imgVerficar" id="crossP1.1" src="assets/red_cross.png">
 						<img class="imgVerficar" id="checkP1.1" src="assets/Check_green.png">
 	    		</li>
-	    		<li class="rep">
-	    			<input class="rp" type="radio" name="rp1" id="rp1.2" value="halo" /><label for="crust2">Halo</label>
+	    		<li id="rep1-2">
+	    			<input class="rp" type="radio" name="rp1" id="rp1.2" value="halo" /><label id="fondos1-2" for="crust2">Halo</label>
 	    			<img class="imgVerficar" id="crossP1.2" src="assets/red_cross.png">
 						<img class="imgVerficar" id="checkP1.2" src="assets/Check_green.png">
 	    		</li>
-	    		<li class="rep">
-	    			<input class="rp" type="radio" name="rp1" id="rp1.3" value="last" /><label for="crust3">The Last of Us</label>
+	    		<li id="rep1-3">
+	    			<input class="rp" type="radio" name="rp1" id="rp1.3" value="last" /><label id="fondos1-3" for="crust3">The Last of Us</label>
 	    			<img class="imgVerficar" id="crossP1.3" src="assets/red_cross.png">
 						<img class="imgVerficar" id="checkP1.3" src="assets/Check_green.png">
 	    		</li>
@@ -47,12 +48,12 @@
 				<input class="btn" type=image src="assets/checkG.png" name="verificarRespuestas" id="btnVer2" onclick="verificar(event)" />
 			</h3>
 	  		<ul class="radio ">
-	    		<li class="rep">
+	    		<li id="rep2-1">
 	    			<input class="rp" type="radio" name="rp2" id="rp2.1" value="half" /><label for="crust1">Verdadero</label>
 	    			<img class="imgVerficar" id="crossP2.1" src="assets/red_cross.png">
 						<img class="imgVerficar" id="checkP1.1" src="assets/Check_green.png">
 	    		</li>
-	    		<li class="rep">
+	    		<li id="rep2-2">
 	    			<input class="rp" type="radio" name="rp2" id="rp2.2" value="halo" /><label for="crust2">Falso</label>
 	    			<img class="imgVerficar" id="crossP2.1" src="assets/red_cross.png">
 						<img class="imgVerficar" id="checkP2.1" src="assets/Check_green.png">
@@ -69,8 +70,8 @@
 				<input class="btn" type=image src="assets/reset.png" name="limpiarRespuestas" id="btnLimp3" onclick ="limpiar(event)"/>
 				<input class="btn" type=image src="assets/checkG.png" name="verificarRespuestas" id="btnVer3" onclick="verificar(event)" />
 			</h3>
-	  		<ul class="radio ">
-	    		<li class="rep">
+	  		<ul id="repText">
+	    		<li class="rep3-1">
 					<textarea name="textArea1" id="textArea" cols="120" rows="10" required></textarea>
 	    		</li>
 	  		</ul>
@@ -92,9 +93,9 @@
 				<input class="btn" type=image src="assets/checkG.png" name="verificarRespuestas" id="btnVer4" onclick="verificar(event)" />
 			</h3>
 	  		<ul class="radio ">
-	    		<li class="rep">
+	    		<li id="multiTextRep">
 						<p>Nada es <input type="text" id="rp4.1"></input>, todo está <input type="text" id="rp4.2"></input>.
-	    			<img class="imgVerficar" id="crossP4.1" src="assets/red_cross.png">
+	    				<img class="imgVerficar" id="crossP4.1" src="assets/red_cross.png">
 						<img class="imgVerficar" id="checkP4.1" src="assets/Check_green.png">
 					</p>
 	    		</li>

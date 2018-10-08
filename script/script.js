@@ -17,6 +17,9 @@ function limpiar(e){
     numClass = numClass.length;
     while(contador <= numClass){
       document.getElementById("rp1."+contador+"").checked = false;
+      document.getElementById("rep1-"+contador+"").style.backgroundColor="";
+      document.getElementById("checkP1."+contador+"").style.visibility="hidden"; 
+      document.getElementById("crossP1."+contador+"").style.visibility="hidden";
       contador++;
     }
   }if(btnLimpiar == "btnLimp2"){
@@ -25,13 +28,20 @@ function limpiar(e){
     numClass = numClass.length;
     while(contador <= numClass){
       document.getElementById("rp2."+contador+"").checked = false;
+      document.getElementById("rep2-"+contador+"").style.backgroundColor="";
+      document.getElementById("checkP2."+contador+"").style.visibility="hidden"; 
+      document.getElementById("crossP2."+contador+"").style.visibility="hidden";
       contador++;
     }
   }if(btnLimpiar == "btnLimp3"){
     document.getElementById("textArea").value = "";
+    document.getElementById("repText").style.backgroundColor = ""; 
   }if(btnLimpiar == "btnLimp4"){
     document.getElementById("rp4.1").value = "";
     document.getElementById("rp4.2").value = "";
+    document.getElementById("checkP4.1").style.visibility="hidden"; 
+    document.getElementById("crossP4.1").style.visibility="hidden";
+    document.getElementById("multiTextRep").style.backgroundColor = ""; 
 
   }
 }
@@ -51,15 +61,20 @@ function verificar(e){
     if(document.getElementById("rp1.3").checked == true){
       alert("correcto");
       document.getElementById("rp1.3").className = "rpCo";
-      document.getElementById("checkP1.3").style.visibility = "visible";
+      document.getElementById("checkP1.3").style.visibility = "visible"; 
+      document.getElementById("rep1-3").style.backgroundColor = "GreenYellow"; 
+           
     }else if(document.getElementById("rp1.1").checked == true){
       alert("Incorrecto");
       document.getElementById("rp1.3").className = "rpIn";
       document.getElementById("crossP1.1").style.visibility = "visible";
+      document.getElementById("rep1-1").style.backgroundColor = "#ff8080"; 
+          
     }else if(document.getElementById("rp1.2").checked == true){
       alert("Incorrecto");
       document.getElementById("rp1.2").className = "rpIn";
       document.getElementById("crossP1.2").style.visibility = "visible";
+      document.getElementById("rep1-2").style.backgroundColor = "#ff8080";
     }
     contador_interno1++;
     document.getElementById("intentoInterno1").innerHTML = contador_interno1;
@@ -77,6 +92,7 @@ function verificar(e){
   }
   else if(btnVerificar == "btnVer3"){
     document.getElementById("resP3").innerHTML = "PC";
+    document.getElementById("repText").style.backgroundColor = "#fff757"; 
     contador_interno3++;
     document.getElementById("intentoInterno3").innerHTML = contador_interno3;
   }
@@ -84,9 +100,11 @@ function verificar(e){
     if(document.getElementById("rp4.1").value == resPregunta4t1 && document.getElementById("rp4.2").value == resPregunta4t2){
       alert("correcto");
       document.getElementById("checkP4.1").style.visibility = "visible";
+      document.getElementById("multiTextRep").style.backgroundColor = "GreenYellow"; 
     }else{
       alert("Incorrecto");
       document.getElementById("crossP4.1").style.visibility = "visible";
+      document.getElementById("multiTextRep").style.backgroundColor = "#ff8080"; 
     }
     contador_interno4++;
     document.getElementById("intentoInterno4").innerHTML = contador_interno4;
