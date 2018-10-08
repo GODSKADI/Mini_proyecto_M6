@@ -2,6 +2,12 @@ body{
   margin-left: 50px;
   /*background-color: #4a4949;*/
 }
+header>h1,header>h2{
+	text-align: center;
+}
+ul>li{
+	padding:1.5%;
+}
 .contenido{
 	margin:auto;
 	width: 90%;
@@ -11,11 +17,9 @@ body{
   	border: solid black 1.5px;
   	border-radius: 100%;
 }
-header>h1,header>h2{
-	text-align: center;
-}
+
 .imgVerficar{
-	width: 1.2%;
+	width: 1.7%;
 	visibility: hidden;
 }
 .caja{
@@ -51,7 +55,7 @@ header>h1,header>h2{
 		.rep{
 			padding: 1%;
 		}
-		.rep:hover{
+		ul>li:hover{
 			background-color: Aquamarine;
 
 		}
@@ -62,6 +66,10 @@ header>h1,header>h2{
 		li:focus{
 			background-color: blue;
 		}
-		ul.radio{
+		ul>li{
 			list-style: none;
+		}
+		.mirror{
+			/*visibility: hidden;*/
+			background-color: black;
 		}
