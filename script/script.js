@@ -1,3 +1,9 @@
+//Onload
+//no funcional
+function limpiarChecks(){
+  documnet.getElementsByName("rp1").checked = false;
+  documnet.getElementsByName("rp2").checked = false;
+}
 
 /*botones*/
 function negativoLimp(x) {
