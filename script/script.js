@@ -1,3 +1,21 @@
+
+/*botones*/
+function negativoLimp(x) {
+  x.src="assets/reset_w.png";
+
+}
+
+function normalLimp(x) {
+  x.src ="assets/reset.png";
+}
+function negativoCheck(x) {
+  document.getElementById("btnVer1").src ="assets/check_w.png";
+}
+
+function normalCheck(x) {
+  document.getElementById("btnVer1").src ="assets/checkG.png";
+}
+
 //Respuestas del Cuestionario
 var resPregunta3 = "PC";
 var resPregunta4t1 = "verdad";
