@@ -59,20 +59,17 @@ function verificar(e){
   }
   if(btnVerificar == "btnVer1"){
     if(document.getElementById("rp1.3").checked == true){
-      alert("correcto");
-      document.getElementById("rp1.3").className = "rpCo";
+        document.getElementById("rp1.3").className = "rpCo";
       document.getElementById("checkP1.3").style.visibility = "visible"; 
       document.getElementById("rep1-3").style.backgroundColor = "GreenYellow"; 
            
     }else if(document.getElementById("rp1.1").checked == true){
-      alert("Incorrecto");
-      document.getElementById("rp1.3").className = "rpIn";
+          document.getElementById("rp1.3").className = "rpIn";
       document.getElementById("crossP1.1").style.visibility = "visible";
       document.getElementById("rep1-1").style.backgroundColor = "#ff8080"; 
           
     }else if(document.getElementById("rp1.2").checked == true){
-      alert("Incorrecto");
-      document.getElementById("rp1.2").className = "rpIn";
+          document.getElementById("rp1.2").className = "rpIn";
       document.getElementById("crossP1.2").style.visibility = "visible";
       document.getElementById("rep1-2").style.backgroundColor = "#ff8080";
     }
@@ -81,11 +78,9 @@ function verificar(e){
   }
   else if(btnVerificar == "btnVer2"){
     if(document.getElementById("rp2.2").checked == true){
-      alert("correcto");
-      document.getElementById("checkP2.1").style.visibility = "visible";
+        document.getElementById("checkP2.1").style.visibility = "visible";
     }else if(document.getElementById("rp2.1").checked == true){
-      alert("Incorrecto");
-      document.getElementById("crossP2.1").style.visibility = "visible";
+          document.getElementById("crossP2.1").style.visibility = "visible";
     }
     contador_interno2++;
     document.getElementById("intentoInterno2").innerHTML = contador_interno2;
@@ -98,12 +93,10 @@ function verificar(e){
   }
   else if(btnVerificar == "btnVer4"){
     if(document.getElementById("rp4.1").value == resPregunta4t1 && document.getElementById("rp4.2").value == resPregunta4t2){
-      alert("correcto");
-      document.getElementById("checkP4.1").style.visibility = "visible";
+        document.getElementById("checkP4.1").style.visibility = "visible";
       document.getElementById("multiTextRep").style.backgroundColor = "GreenYellow"; 
     }else{
-      alert("Incorrecto");
-      document.getElementById("crossP4.1").style.visibility = "visible";
+          document.getElementById("crossP4.1").style.visibility = "visible";
       document.getElementById("multiTextRep").style.backgroundColor = "#ff8080"; 
     }
     contador_interno4++;
